@@ -5,17 +5,17 @@ export default function RunnerFactionCardBack() {
     {
       name: "Anarch",
       color: "#FF6B00",
-      src: "/icons/NSG_ANARCH.svg",
+      src: "/wrapped/assets/icons/NSG_ANARCH.svg",
     },
     {
       name: "Criminal",
       color: "#44A8FF",
-      src: "/icons/NSG_CRIMINAL.svg",
+      src: "/wrapped/assets/icons/NSG_CRIMINAL.svg",
     },
     {
       name: "Shaper",
       color: "#1ECB8A",
-      src: "/icons/NSG_SHAPER.svg",
+      src: "/wrapped/assets/icons/NSG_SHAPER.svg",
     },
   ];
 

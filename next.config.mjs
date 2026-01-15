@@ -4,6 +4,8 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["@mantine/core", "@mantine/hooks"],
   },
+  output: "export",
+  assetPrefix: "/wrapped/assets",
 };
 
 export default nextConfig;

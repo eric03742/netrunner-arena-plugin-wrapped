@@ -471,7 +471,7 @@ export default function WrappedStats({
         cardTitle="Runner MVP"
         cardSubtitle="Tap to flip"
         coverContent={<RunnerFactionCardBack />}
-        coverMask="/cardback/mask-white-on-transparent.png"
+        coverMask="/wrapped/assets/cardback/mask-white-on-transparent.png"
         revealTitle={`${shortenId(favoriteRunner.identity)}!`}
         revealSubtitle={`(${favoriteRunner.games} games)`}
       />
@@ -490,12 +490,12 @@ export default function WrappedStats({
         cardSubtitle="Tap to flip"
         coverContent={
           <img
-            src="/cardback/corp-back-2.png"
+            src="/wrapped/assets/cardback/corp-back-2.png"
             alt="Corp card back"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         }
-        coverMask="/cardback/corp-mask-2.png"
+        coverMask="/wrapped/assets/cardback/corp-mask-2.png"
         revealTitle={`${shortenId(favoriteCorp.identity)}!`}
         revealSubtitle={`(${favoriteCorp.games} games)`}
       />
