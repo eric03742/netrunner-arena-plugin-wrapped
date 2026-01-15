@@ -1,5 +1,10 @@
-import { Decklist } from "@/app/mlstuff/page";
 import { ALL_ARCHETYPES } from "./archetypes";
+
+export type Decklist = {
+  card_name: string;
+  card_type: string;
+  card_count: number;
+}[];
 
 export const DEFAULT_UNKNOWN_ID = "<Missing ID>";
 
