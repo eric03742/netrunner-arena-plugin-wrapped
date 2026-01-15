@@ -101,7 +101,7 @@ export default function WrappedStats({
   }, [profile, summary.games]);
 
   const defaultCardImage =
-    "https://card-images.netrunnerdb.com/v2/xlarge/35024.webp";
+    "https://printing.sneakdoorbeta.net/zhCN/xlarge/35024.webp";
   const totalGames = summary.games.length;
   const getCardImageForIdentity = useCallback(
     (identity: string | undefined | null) => {

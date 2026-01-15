@@ -51,14 +51,14 @@ function getImageUrl(card: CardData): string {
       const maxPrintingId = printing_ids.reduce((max, id) =>
         id > max ? id : max
       );
-      return `https://card-images.netrunnerdb.com/v2/large/${maxPrintingId}.jpg`;
+      return `https://printing.sneakdoorbeta.net/zhCN/large/${maxPrintingId}.webp`;
     }
 
-    return `https://card-images.netrunnerdb.com/v2/xlarge/${printingId}.webp`;
+    return `https://printing.sneakdoorbeta.net/zhCN/xlarge/${printingId}.webp`;
   }
 
   // FFG or other publishers use large/.jpg
-  return `https://card-images.netrunnerdb.com/v2/large/${printingId}.jpg`;
+  return `https://printing.sneakdoorbeta.net/zhCN/large/${printingId}.webp`;
 }
 
 let cachedImageMap: IdentityImageMap | null = null;

@@ -122,7 +122,6 @@ export default function SummarySlide({
                     key={runner.identity}
                     src={getCardImageForIdentity(runner.identity)}
                     alt={shortenId(runner.identity)}
-                    crossOrigin="anonymous"
                     style={{
                       position: "absolute",
                       width: pos.width,
@@ -154,7 +153,6 @@ export default function SummarySlide({
                     key={corp.identity}
                     src={getCardImageForIdentity(corp.identity)}
                     alt={shortenId(corp.identity)}
-                    crossOrigin="anonymous"
                     style={{
                       position: "absolute",
                       width: pos.width,
