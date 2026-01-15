@@ -38,7 +38,6 @@ import HighlightCarousel from "./HighlightCarousel";
 import GameDotsGrid from "./GameDotsGrid";
 import RivalsParallaxSection from "./RivalsParallaxSection";
 import StreaksSlide from "./StreaksSlide";
-import EndSlide from "./EndSlide";
 import CreditsSlide from "./CreditsSlide";
 import HeroSlide from "./HeroSlide";
 import SummarySlide from "./SummarySlide";
@@ -559,7 +558,6 @@ export default function WrappedStats({
       />
     ),
     <CreditsSlide key="credits" />,
-    <EndSlide key="cta" onReset={onReset} />,
   ].filter(Boolean) as ReactNode[];
 
   const scrollByStep = useCallback(

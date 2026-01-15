@@ -30,16 +30,6 @@ export default function HeroSlide({
 
   return (
     <Slide gradient="radial-gradient(circle, #0c0b1d, #02010a)">
-      <ActionIcon
-        variant="subtle"
-        color="gray"
-        size="md"
-        onClick={onReset}
-        style={{ position: "absolute", top: 16, right: 16 }}
-        aria-label="Close"
-      >
-        <IconX style={{ width: "70%", height: "70%" }} />
-      </ActionIcon>
       <Stack align="center" gap="sm">
         <Title
           order={1}
