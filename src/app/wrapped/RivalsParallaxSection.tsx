@@ -484,8 +484,8 @@ export default memo(function RivalsParallaxSection({
           const y = row * hexHeight * 1.05;
 
           const gravatarUrl = opponent.emailHash
-            ? `https://gravatar.com/avatar/${opponent.emailHash}?s=200&d=retro`
-            : `https://gravatar.com/avatar/?s=200&d=retro`;
+            ? `https://weavatar.com/avatar/${opponent.emailHash}?s=200&d=retro`
+            : `https://weavatar.com/avatar/?s=200&d=retro`;
 
           // Track refs for top 3 in both grid copies
           const isTop3 = top3Usernames.has(opponent.username);
@@ -640,8 +640,8 @@ export default memo(function RivalsParallaxSection({
         {/* Top 3 flying elements - positioned absolutely, animated */}
         {top3.map((rival, index) => {
           const gravatarUrl = rival.emailHash
-            ? `https://gravatar.com/avatar/${rival.emailHash}?s=200&d=retro`
-            : `https://gravatar.com/avatar/?s=200&d=retro`;
+            ? `https://weavatar.com/avatar/${rival.emailHash}?s=200&d=retro`
+            : `https://weavatar.com/avatar/?s=200&d=retro`;
 
           return (
             <div

@@ -74,8 +74,8 @@ export default function RivalsHexGrid({ rivals }: RivalsHexGridProps) {
         const y = row * hexHeight * 1.05;
 
         const gravatarUrl = opponent.emailHash
-          ? `https://gravatar.com/avatar/${opponent.emailHash}?s=120&d=retro`
-          : `https://gravatar.com/avatar/?s=120&d=retro`;
+          ? `https://weavatar.com/avatar/${opponent.emailHash}?s=120&d=retro`
+          : `https://weavatar.com/avatar/?s=120&d=retro`;
 
         return (
           <Tooltip

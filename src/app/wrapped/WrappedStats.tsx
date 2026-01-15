@@ -376,7 +376,7 @@ export default function WrappedStats({
   ];
 
   const gravatarUrl = profile?.emailHash
-    ? `https://gravatar.com/avatar/${profile.emailHash}?s=200`
+    ? `https://weavatar.com/avatar/${profile.emailHash}?s=200`
     : null;
 
   const slides: ReactNode[] = [

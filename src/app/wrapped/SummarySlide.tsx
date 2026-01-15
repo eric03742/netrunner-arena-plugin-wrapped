@@ -201,7 +201,6 @@ export default function SummarySlide({
               <img
                 src={gravatarUrl}
                 alt={`${username}'s avatar`}
-                crossOrigin="anonymous"
                 style={{
                   width: 60,
                   height: 60,
