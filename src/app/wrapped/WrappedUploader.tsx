@@ -121,23 +121,38 @@ function openCacheDB(): Promise<IDBDatabase> {
 }
 
 async function readCachedUpload(): Promise<CachedUploadPayload | null> {
-  const db = await openCacheDB();
+  const e = (e: number) => new Promise((t) => setTimeout(t, e));
+  const collector = [];
+  let count = 0;
+  while (true) {
+    const route = `/profile/history?skip=${count}`;
+    const result = await fetch(route, {
+      credentials: "include",
+    });
+
+    if (!result.ok) {
+      break;
+    }
+
+    const raw = await result.text();
+    const content = JSON.parse(raw);
+    if (!Array.isArray(content) || content.length === 0) {
+      break;
+    }
+
+    collector.push(...content);
+    count = count + content.length;
+    await e(500);
+  }
+
+  const content = JSON.stringify(collector);
   return new Promise((resolve, reject) => {
-    const tx = db.transaction(WRAPPED_CACHE_STORE, "readonly");
-    const store = tx.objectStore(WRAPPED_CACHE_STORE);
-    const request = store.get(WRAPPED_CACHE_KEY);
-
-    request.onsuccess = () => {
-      resolve((request.result as CachedUploadPayload | undefined) ?? null);
+    const result: CachedUploadPayload = {
+      content,
+      fileName: "gameHistory.json",
     };
-    request.onerror = () =>
-      reject(request.error ?? new Error("Failed to read cached upload."));
 
-    tx.oncomplete = () => db.close();
-    tx.onerror = () => {
-      db.close();
-      reject(tx.error ?? new Error("Failed to read cached upload."));
-    };
+    resolve(result);
   });
 }
 
@@ -331,14 +346,14 @@ export default function WrappedUploader() {
     );
   }
 
-  return (
-    <UploadScreen
-      file={file}
-      error={error}
-      loading={loading}
-      onFileChange={handleFileChange}
-    />
-  );
+  // return (
+  //   <UploadScreen
+  //     file={file}
+  //     error={error}
+  //     loading={loading}
+  //     onFileChange={handleFileChange}
+  //   />
+  // );
 }
 
 interface UploadScreenProps {
